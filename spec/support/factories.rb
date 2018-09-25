@@ -11,7 +11,12 @@ FactoryBot.define do
 
   factory :user do
     first_name { "John Doe" }
+  end
+
+  factory :groups_user do
+    amt_invested { 112 }
 
     group
+    user
   end
 end

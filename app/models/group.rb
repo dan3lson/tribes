@@ -1,6 +1,7 @@
 class Group < ApplicationRecord
   belongs_to :tribe
-  has_many :users
+  has_many :groups_users, dependent: :destroy
+  has_many :users, through: :groups_users
 
   validates :name, presence: true
 
