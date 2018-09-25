@@ -2,12 +2,13 @@ require 'rails_helper'
 
 RSpec.describe Group, type: :model do
   it { should belong_to(:tribe) }
+  it { should have_many(:groups_users) }
   it { should have_many(:users) }
 	it { should validate_presence_of(:name) }
 
   describe "#has_users?" do
     it "returns true" do
-      group = FactoryBot.create(:user).group
+      group = FactoryBot.create(:groups_user).group
 
       expect(group).to be_has_users
     end
@@ -24,7 +25,7 @@ RSpec.describe Group, type: :model do
       group = FactoryBot.create(:group)
 
       99.times do
-        FactoryBot.create(:user, group: group)
+        FactoryBot.create(:groups_user, group: group)
       end
 
       expect(group).to be_is_full
@@ -34,7 +35,7 @@ RSpec.describe Group, type: :model do
       group = FactoryBot.create(:group)
 
       98.times do
-        FactoryBot.create(:user, group: group)
+        FactoryBot.create(:groups_user, group: group)
       end
 
       expect(group).not_to be_is_full
@@ -42,18 +43,18 @@ RSpec.describe Group, type: :model do
   end
 
   describe "#num_users" do
-    it "returns integer for 1 user" do
+    it "returns the integer 99" do
       group = FactoryBot.create(:group)
 
       99.times do
-        FactoryBot.create(:user, group: group)
+        FactoryBot.create(:groups_user, group: group)
       end
 
       expect(group.num_users).to eq(99)
     end
 
-    it "returns integer for 99 users" do
-      group = FactoryBot.create(:user).group
+    it "returns the integer 1" do
+      group = FactoryBot.create(:groups_user).group
 
       expect(group.num_users).to eq(1)
     end
