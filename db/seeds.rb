@@ -5,3 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# Create Tribes
+
+5.times do |i|
+  Tribe.create!(name: "Tribe #{i}")
+end
+
+# Create Groups
+
+10.times do |i|
+  Group.create!(name: "Group #{i}")
+end
+
+# Add Groups to Tribes
+
+10.times do |i|
+  tribe = Tribe.all.sample
+
+  Group.all.each do |group|
+    tribe.groups << group
+  end
+end

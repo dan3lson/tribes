@@ -1,24 +1,12 @@
-# README
+# Tribes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Template for creating groups of users, changing groups, managing roles, and
+managing settings.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## To Do
+- Create a tribe
+- Create a group
+- Create a tribe that has many groups/a group that belongs to one tribe
+- Switch a group to another tribe
+- Manage settings for a tribe
+- Manage settings for a group
