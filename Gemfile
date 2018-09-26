@@ -11,6 +11,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'faker'
+gem 'dotenv-rails'
+gem 'dwolla_v2', '~> 2.0'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
