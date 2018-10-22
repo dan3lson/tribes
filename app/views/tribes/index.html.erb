@@ -1,0 +1,36 @@
+<div class="jumbotron text-center">
+  <h1 class="display-3">
+    Join a Tribe &amp;
+    <br>
+    Make Them Coins.
+  </h1>
+  <%= link_to "Get started",
+      signup_path, role: "btn",
+      class: "btn btn-dark btn-lg",
+      title: "Get Started Now"
+  %>
+</div>
+<div class="row">
+  <% @tribes.each do |tribe| %>
+    <div class="col-md-6">
+      <h1><%= tribe.name %></h1>
+      <ul>
+        <% tribe.groups.each do |group| %>
+          <li>
+            <%= group.name %>
+            <br>
+            <small class="text-muted">
+              Users (<%= group.num_users %>)
+              <br>
+              Amount Invested
+              ($<%= number_with_delimiter(
+                  group.amt_invested, delimiter: ","
+                )
+              %>)
+            </small>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>

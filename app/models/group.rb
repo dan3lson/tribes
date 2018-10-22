@@ -16,4 +16,8 @@ class Group < ApplicationRecord
   def num_users
     users.count
   end
+
+  def amt_invested
+    GroupsUser.where(group: self).sum(:amt_invested)
+  end
 end

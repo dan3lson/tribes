@@ -13,6 +13,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'faker'
 gem 'dotenv-rails'
 gem 'dwolla_v2', '~> 2.0'
+gem 'jquery-rails'
+gem 'bootstrap', '~> 4.1.3'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 

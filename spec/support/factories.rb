@@ -10,7 +10,10 @@ FactoryBot.define do
   end
 
   factory :user do
-    first_name { "John Doe" }
+    first_name { "John" }
+    last_name { "Doe" }
+    email { "john@doe.com" }
+    dwolla_id { "foo1foo2foo3foo4" }
   end
 
   factory :groups_user do
