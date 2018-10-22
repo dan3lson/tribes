@@ -3,7 +3,7 @@
 Template for creating groups of users, changing groups, managing roles, and
 managing settings.
 
-![Tribes Preview](app/assets/images/seeded-view.png?raw=true "Tribes preview")
+![Tribes Preview](app/assets/images/tribes-preview.png?raw=true "Tribes preview")
 
 ## To Do
 - Create a tribe
