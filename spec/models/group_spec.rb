@@ -59,4 +59,12 @@ RSpec.describe Group, type: :model do
       expect(group.num_users).to eq(1)
     end
   end
+
+  describe "#amt_invested" do
+    it "returns an integer" do
+      group = FactoryBot.create(:groups_user).group
+
+      expect(group.amt_invested).to eq(112)
+    end
+  end
 end
